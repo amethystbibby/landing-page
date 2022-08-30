@@ -4,7 +4,7 @@ html {
 }
 
 html, body {
-	font: 15px "Roboto Mono", Helvetica, sans-serif;
+	font: 18px "Roboto Mono", Helvetica, sans-serif;
 	color: #ebebea;
 	background: #222222;
 	margin: 0;
@@ -221,12 +221,6 @@ a:hover, a:focus {
 @media (max-width: 800px) {
 	html, body {
 		font-size: 20px;
-	}
-}
-
-@media (min-width: 600px) {
-	html, body {
-		font-size: 17px;
 	}
 }
 
