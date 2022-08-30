@@ -206,25 +206,31 @@ a:hover, a:focus {
 }
 
 .text {
-	font-size: 1rem;
+	font-size: 0.9rem;
 	font-weight: 100;
 	margin-bottom: -.45em;
 	max-width: 700px;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
 	html, body {
-		font-size: 22px;
+		font-size: 21px;
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
 	html, body {
-		font-size: 20px;
+		font-size: 19px;
 	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+	html, body {
+		font-size: 17px;
+	}
+}
+
+@media (max-width: 480px) {
 	html {
 		font-size: 15px;
 	}
