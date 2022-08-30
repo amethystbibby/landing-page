@@ -4,7 +4,7 @@ html {
 }
 
 html, body {
-	font: 15px/1.5 "Roboto Mono", Helvetica, sans-serif;
+	font: 15px "Roboto Mono", Helvetica, sans-serif;
 	color: #ebebea;
 	background: #222222;
 	margin: 0;
@@ -189,6 +189,7 @@ a:hover, a:focus {
 .section-bio {
 	-webkit-box-pack: justify;
 	justify-content: space-between;
+	padding-bottom: 5rem;
 }
 
 .col-section {
@@ -209,6 +210,12 @@ a:hover, a:focus {
 	max-width: 700px;
 }
 
+@media (min-width: 1000px) {
+	html, body * {
+		font-size: 20px;
+	}
+}
+
 @media (max-width: 600px) {
 	html {
 		font-size: 13px;
@@ -222,6 +229,7 @@ a:hover, a:focus {
 .section-projects {
 	display: block;
 	min-height: 0;
+	padding-top: 0
 }
 
 .projects {
