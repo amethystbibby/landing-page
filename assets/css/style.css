@@ -80,6 +80,7 @@ h1.typewriter{
 }
 
 .fadeIn {
+	font-size: 1.5rem;
 	-webkit-animation: fadeIn 5s;
 	animation: fadeIn 4s;
 	animation-fill-mode: forwards;
@@ -92,6 +93,7 @@ h1.typewriter{
 }
 
 h2 {
+	font-size: 1rem;
 	font-weight: 400;
 	margin: 0;
 	line-height: .8;
@@ -204,14 +206,20 @@ a:hover, a:focus {
 }
 
 .text {
-	font-size: 0.9rem;
+	font-size: 1rem;
 	font-weight: 100;
 	margin-bottom: -.45em;
 	max-width: 700px;
 }
 
-@media (min-width: 1000px) {
-	html, body * {
+@media (min-width: 1400px) {
+	html, body {
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 1000px) {
+	html, body {
 		font-size: 20px;
 	}
 }
@@ -219,10 +227,6 @@ a:hover, a:focus {
 @media (max-width: 600px) {
 	html {
 		font-size: 13px;
-	}
-	.text {
-		padding-top: 15vw;
-		font-size: 18px;
 	}
 }
 
