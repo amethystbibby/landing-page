@@ -95,9 +95,10 @@ h1.typewriter{
 	100% {opacity: 1}
 }
 
-@keyframes moveUp {
+/* @keyframes moveUp {
 	to { transform: translate(30vw, 30vh)}
-}
+} */
+
 h2 {
 	font-size: 1rem;
 	font-weight: 400;
