@@ -1,21 +1,94 @@
-/* 1. Content elements */
 html {
 	-webkit-text-size-adjust: 100%;
 		-ms-text-size-adjust: 100%;
 }
 
-body {
+html, body {
 	font: 15px/1.5 "Roboto Mono", Helvetica, sans-serif;
 	color: #ebebea;
 	background: #222222;
 	margin: 0;
+	height: 100%;
+	width: 100%;
+	padding: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
-dd, dl, p {
+p {
 	margin: 0;
 	padding: 0;
+}
+
+.welcome {
+	display: block;
+	height: 100vh;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.headline {
+	margin: 25vh 0;
+}
+
+.fadeIn {
+	opacity: 0;
+}
+
+.typewriter-box {
+	width: fit-content;
+	height: auto;
+}
+
+h1 span.feature {
+	font-size: 2rem;
+	color: #fccd03;
+}
+
+h1.typewriter{
+	font-size: 2rem;
+	overflow: hidden;
+	border-right: .15em solid #fccd03;
+	white-space: nowrap;
+	letter-spacing: .15em;
+	-webkit-animation: 
+	  typing 2s steps(40, end),
+	  blink-caret .75s step-end infinite;
+	animation: 
+	  typing 2s steps(40, end),
+	  blink-caret .75s step-end infinite;
+}
+
+@-webkit-keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+}
+
+@keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+}
+
+@-webkit-keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: #fccd03 }
+}
+
+@keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: #fccd03 }
+}
+
+.fadeIn {
+	-webkit-animation: fadeIn 5s;
+	animation: fadeIn 4s;
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0}
+	100% {opacity: 1}
 }
 
 h2 {
@@ -54,10 +127,6 @@ a:hover, a:focus {
 }
 
 .logo {
-	background: url('../../assets/images/logo.svg') no-repeat;
-	background-position: top left, top left;
-	background-repeat: no-repeat;
-	background-size: auto, auto 100%;
 	width: 42px;
 	height: 50px;
 	padding: 0;
@@ -133,31 +202,128 @@ a:hover, a:focus {
 	}
 }
 
-.bio {
-	font-size: 20px;
+.text {
+	font-size: 0.9rem;
 	font-weight: 100;
 	margin-bottom: -.45em;
 	max-width: 700px;
 }
 
 @media (max-width: 600px) {
-	.bio {
+	html {
+		font-size: 13px;
+	}
+	.text {
 		padding-top: 15vw;
 		font-size: 18px;
 	}
 }
 
-.list {
-	margin-top: 3.2em;
+.section-projects {
+	display: block;
+	min-height: 0;
 }
 
-.list-item {
-	margin-top: .25em;
-	margin-bottom: 2em;
+.projects {
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+	height: 40%;
+	align-self: flex-end;
 }
 
-.list-item:last-child {
-	margin-bottom: -.4em;
+.project {
+	/* width: calc(33.3333% - 1rem); */
+	width: calc(50% - 1rem);
+	overflow: hidden;
+	margin: 1rem 1rem;
+	background-color: #1E1E1E;
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px 0px inset;
+	border-radius: 0.5rem;
+	color: rgb(16,12,8);
+	font-size: 2rem;
+	overflow: hidden;
+}
+
+.project p {
+	color: #ebebea;
+	margin: 1rem 0;
+}
+.project img {
+	height: 15rem;
+	object-fit: cover;
+	width: 100%;
+}
+
+.project div {
+	padding: 1rem 1rem;
+}
+
+.project h3 {
+	font-size: 1.5rem;
+	color: #ebebea;
+	margin-top: 0.2rem;
+}
+
+@media (max-width:1000px) {
+	.projects {
+		flex-direction: column;
+	}
+	.project {
+		width: auto;
+	}
+
+	.project .text {
+		padding-top: 0;
+	}
+}
+
+.skills img {
+	height: 2rem;
+	width: 2rem;
+}
+.buttons {
+	display: flex;
+	width: 100%;
+	align-items: space-evenly;
+	justify-content: center;
+}
+
+.button {
+  background-color: #262626;
+  border: 0;
+  margin: 1rem;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #ebebea;
+  font: 600 .875rem "Roboto Mono", Helvetica, sans-serif;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+}
+
+.buttons a {
+	border-bottom: none;
+}
+
+.button:hover,
+.button:hover a{
+  background-color: #282828;
+  color: #fccd03;
+  transition: 0.5s;
+}
+
+.button:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button:focus-visible {
+  box-shadow: none;
 }
 
 .scrunch {
@@ -183,8 +349,8 @@ a:hover, a:focus {
 
 .footer {
 	position: fixed;
-	right: 96px;
-	bottom: 92px;
+	right: 90px;
+	bottom: 90px;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -215,55 +381,16 @@ a:hover, a:focus {
 .footer-links {
 	margin-top: 1em;
 	line-height: 1;
+	padding-bottom: 0.1em;
+}
+
+.footer-links img{
+	height: 1em;
+	fill: whitesmoke
 }
 
 @media (max-width: 950px) {
 	.footer-links {
 		display: inline;
-	}
-}
-
-@media (hover: hover) {
-	.footer-links:nth-child(odd):hover~.scrunch {
-		background-color: #d9534f;
-	}
-
-	.footer-links:nth-child(2n):hover~.scrunch {
-		background-color: #428bca;
-	}
-
-	.link-email:hover~.scrunch:after {
-		-webkit-animation: one 1s .25s linear forwards;
-				animation: one 1s .25s linear forwards;
-	}
-
-	.link-behance:hover~.scrunch:after {
-		-webkit-animation: two 1s .25s linear forwards;
-				animation: two 1s .25s linear forwards;
-	}
-
-	.link-dribbble:hover~.scrunch:after {
-		-webkit-animation: three 1s .25s linear forwards;
-				animation: three 1s .25s linear forwards;
-	}
-
-	.link-linkedin:hover~.scrunch:after {
-		-webkit-animation: four 1s .25s linear forwards;
-				animation: four 1s .25s linear forwards;
-	}
-
-	.link-twitter:hover~.scrunch:after {
-		-webkit-animation: five 1s .25s linear forwards;
-				animation: five 1s .25s linear forwards;
-	}
-
-	.link-instagram:hover~.scrunch:after {
-		-webkit-animation: six 1s .25s linear forwards;
-				animation: six 1s .25s linear forwards;
-	}
-
-	.link-site:hover~.scrunch:after {
-		-webkit-animation: seven 1s .25s linear forwards;
-				animation: seven 1s .25s linear forwards;
 	}
 }
