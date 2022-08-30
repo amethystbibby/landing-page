@@ -220,29 +220,29 @@ a:hover, a:focus {
 
 @media (min-width: 1024px) {
 	html, body {
-		font-size: 21px;
+		font-size: 22px;
 	}
 }
 
 @media (max-width: 1024px) {
 	html, body {
-		font-size: 19px;
+		font-size: 20px;
 	}
 }
 
 @media (max-width: 768px) {
 	html, body {
-		font-size: 17px;
+		font-size: 18px;
+	}
+
+	h1.typewriter {
+		font-size: 1.5rem;
 	}
 }
 
 @media (max-width: 480px) {
 	html {
-		font-size: 15px;
-	}
-
-	h1.typewriter {
-		font-size: 1.8rem;
+		font-size: 16px;
 	}
 }
 
