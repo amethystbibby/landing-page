@@ -56,8 +56,7 @@ h1.typewriter{
 	  blink-caret .75s step-end infinite;
 	animation: 
 	  typing 2s steps(40, end),
-	  blink-caret .75s step-end infinite,
-	  moveUp 2s;
+	  blink-caret .75s step-end infinite;
 }
 
 @-webkit-keyframes typing {
@@ -81,11 +80,9 @@ h1.typewriter{
 }
 
 .fadeIn {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	-webkit-animation: fadeIn 5s;
-	animation:
-	 fadeIn 4s,
-	 moveUp 2s;
+	animation: fadeIn 4s;
 	animation-fill-mode: forwards;
 	animation-delay: 2s;
 }
@@ -94,10 +91,6 @@ h1.typewriter{
 	0% {opacity: 0}
 	100% {opacity: 1}
 }
-
-/* @keyframes moveUp {
-	to { transform: translate(30vw, 30vh)}
-} */
 
 h2 {
 	font-size: 1rem;
@@ -236,11 +229,16 @@ a:hover, a:focus {
 		font-size: 18px;
 	}
 
-	h1.typewriter {
+	h1.typewriter,
+	h1 span.feature {
 		font-size: 1.5rem;
 	}
-}
 
+	.fadeIn {
+		font-size: 1rem;
+	}
+}
+ 
 @media (max-width: 480px) {
 	html {
 		font-size: 16px;
